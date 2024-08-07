@@ -1,0 +1,291 @@
+h1 {
+    position: fixed;
+    top: 80px;
+    left: 120px;
+    z-index: 999;
+
+    /* animation: logo_animation 1s infinite linear; */
+}
+
+@keyframes logo_animation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.main_content {
+    position: relative;
+    background: #444;
+    height: 100vh;
+}
+
+.main_content .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1410px;
+    margin: 0 auto;
+}
+
+.main_content .title strong {
+    display: block;
+    margin: 0 0 24px 0;
+    font-size: 20px;
+    font-weight: 100;
+    color: #fff;
+}
+
+.main_content .title h2 {
+    font-size: 56px;
+    font-weight: 900;
+    color: #fff;
+    margin: 0 0 48px 0;
+}
+
+.main_content .title p {
+    margin: 0 0 80px 0;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 24px;
+    color: #fff;
+}
+
+.main_content .title a {
+    display: inline-block;
+    padding: 16px 48px;
+    border: 1px solid #fff;
+    color: #fff;
+
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.main_content .right {
+    position: relative;
+}
+
+.main_content .sin {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.main_content .sin .list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.main_content .sin .list li {
+    height: 500px;
+}
+
+.main_content .sin .list img {
+    animation: sinbal 3s infinite;
+}
+
+.main_content .dots {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.main_content .dots li {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 24px;
+    height: 24px;
+    background: tomato;
+    border-radius: 50%;
+}
+
+.main_content .dots button {
+    border: none;
+    background: transparent;
+    width: 24px;
+    height: 24px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.main_content .dots li:nth-child(1) {
+    bottom: 200px;
+    right: -50px;
+    background: #666;
+}
+
+.main_content .dots li:nth-child(2) {
+    bottom: 140px;
+    right: -45px;
+    background: #777;
+}
+
+.main_content .dots li:nth-child(3) {
+    bottom: 80px;
+    right: -30px;
+    background: #888;
+}
+
+.main_content .dots li:nth-child(4) {
+    bottom: 20px;
+    right: 0;
+    background: #999;
+}
+
+@keyframes sinbal {
+    0% {
+        transform: translate(0, 30px);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, 30px);
+    }
+}
+
+.gs25 {
+    position: relative;
+    left: -120px;
+}
+
+.gs25>* {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 800px;
+}
+
+.gs25 img {
+    width: 100%;
+}
+
+.cu {
+    overflow-x: hidden;
+}
+
+.cu .inner {
+    justify-content: flex-start;
+}
+
+.cu .inner .right {
+    order: -1;
+    margin: 0 auto 0 0;
+    width: 800px;
+    height: 800px;
+
+    top: 120px;
+}
+
+.cu .inner .ring {
+    left: 120px;
+    transform: scale(0.9) skewX(-30deg);
+}
+
+.cu .inner .ring img {
+    width: 700px;
+    animation: logo_animation 10s infinite linear;
+}
+
+.se {
+    background: linear-gradient(#333, #666);
+    overflow: hidden;
+}
+
+.se .txt {
+    position: absolute;
+    top: 0;
+    left: 460px;
+    writing-mode: vertical-rl;
+    white-space: nowrap;
+}
+
+.se .txt span {
+    font-size: 400px;
+    font-weight: 900;
+    color: #666;
+
+    display: inline-block;
+
+}
+
+.se.active .txt span {
+    animation: txt_animation 20s infinite linear;
+
+}
+
+@keyframes txt_animation {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -100%);
+    }
+}
+
+.cu {
+    background: linear-gradient(#666, #333);
+}
+
+.gnb {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    z-index: 999;
+
+    transform: translate(0, -50%);
+
+    width: 80px;
+}
+
+.gnb a {
+    position: relative;
+    display: block;
+    height: 20px;
+    text-indent: -9999px;
+}
+
+.gnb li a::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 20px;
+    height: 1px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+.gnb li.on a::before {
+    width: 60px;
+}
+
+.cu .left {
+    opacity: 0;
+    transform: translate(200px, 0);
+}
+
+.cu.active .left {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: 1s 1s;
+}
